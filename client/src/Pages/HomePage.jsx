@@ -9,7 +9,7 @@ import Header from "../Layouts/Header";
 function HomePage() {
   return (
     <HomeLayout>
-      {/* <Header /> */}
+      
       
       <div className="flex bg-gray-100 items-center justify-center">
         <div className="text-white flex items-center justify-center gap-10 mx-16 h-[90vh]"></div>
@@ -18,7 +18,7 @@ function HomePage() {
           Welcome to Our  &nbsp;
             <span className="text-yellow-500 font-bold">Aesthetic of Perfection</span>
           </h1>
-          <p className="text-xl text-gray-200">
+          <p className="text-xl text-gray-800">
           Experience premium treatments and personalized care that elevate your wellness journey. Your beauty and confidence, redefined.
           </p>
 

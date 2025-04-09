@@ -28,7 +28,6 @@ function HomeLayout({ children }) {
 
   return (
     <div className="min-h-[90vh]">
-      
       {/* Overlay for the Offcanvas Menu */}
       <div
         className={`fixed inset-0 bg-gray-800 bg-opacity-50 z-40 transition-opacity ${
@@ -56,6 +55,15 @@ function HomeLayout({ children }) {
           </div>
           <nav className="mt-8">
             <ul className="space-y-4">
+              <li>
+                <Link
+                  to="/"
+                  className="block py-2 px-4 text-gray-800 hover:bg-lime-500 rounded-md transition"
+                  onClick={toggleMenu}
+                >
+                  Home
+                </Link>
+              </li>
               {isLoggedIn && role === "ADMIN" && (
                 <li>
                   <Link
@@ -85,7 +93,7 @@ function HomeLayout({ children }) {
                     className="block py-2 px-4 text-gray-800 hover:bg-lime-500 rounded-md transition"
                     onClick={toggleMenu}
                   >
-                    Create New Opd
+                    Create Appoitements
                   </Link>
                 </li>
               )}
@@ -205,7 +213,6 @@ function HomeLayout({ children }) {
         {/* Main Navigation */}
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           <div>
-           
             <Link to="/">
               <img
                 src="/img/nivedita-medical-best-medical-in-falakata-bengal-make-my-software-coochbehar.webp"
@@ -217,6 +224,12 @@ function HomeLayout({ children }) {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex space-x-8">
+            <Link
+              to="/"
+              className=" font-semibold text-gray-800 hover:text-lime-600 duration-200 transition"
+            >
+              Home
+            </Link>
             {isLoggedIn && role === "ADMIN" && (
               <Link
                 to="/admin/dashboard"
@@ -238,7 +251,7 @@ function HomeLayout({ children }) {
                 to="/course/create"
                 className=" font-semibold text-gray-800 hover:text-lime-600 duration-200 transition"
               >
-                Create New Opd
+                Create Appoitements
               </Link>
             )}
             <Link
@@ -312,9 +325,7 @@ function HomeLayout({ children }) {
       </header>
 
       {/* Main content */}
-      <main className="pt-32 pb-12 px-4 md:px-6 container mx-auto">
-        {children}
-      </main>
+      <main className="mx-auto">{children}</main>
 
       <Footer />
     </div>

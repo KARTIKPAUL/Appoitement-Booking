@@ -17,23 +17,23 @@ function CourseCard({ data }) {
 
         <div className="p-4 space-y-1 text-white">
           <h2 className="text-xl font-bold text-yellow-500 line-clamp-2">
-            {data?.title}
+            Patient Name: {data?.title}
           </h2>
 
-          <p className="line-clamp-2">{data?.description}</p>
+          <p className="line-clamp-2"> Issues : {data?.description}</p>
 
           <p className="line-clamp-2 font-semibold">
-            <span className="text-yellow-500 font-bold">Catagory: </span>
+            <span className="text-yellow-500 font-bold">Gender: </span>
             {data?.catagory}
           </p>
 
           <p className="line-clamp-2 font-semibold">
-            <span className="text-yellow-500 font-bold">Total Lectures: </span>
+            <span className="text-yellow-500 font-bold">Total Appoitements: </span>
             {data?.numbersOfLectures}
           </p>
 
           <p className="line-clamp-2 font-semibold">
-            <span className="text-yellow-500 font-bold">Instructors: </span>{" "}
+            <span className="text-yellow-500 font-bold">Blood Group: </span>{" "}
             {data?.createdBy}
           </p>
         </div>
