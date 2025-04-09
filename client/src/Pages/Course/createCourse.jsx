@@ -15,8 +15,8 @@ function CreateCourse() {
     catagory: "",
     createdBy: "",
     description: "",
-    thumbnail: null,
-    previewImage: "",
+    //thumbnail: null,
+    //previewImage: "",
   });
 
   function handleImageUpload(e) {
@@ -29,8 +29,8 @@ function CreateCourse() {
       fileReader.addEventListener("load", function () {
         setUserInput({
           ...userInput,
-          previewImage: this.result,
-          thumbnail: uploadedImage,
+          //previewImage: this.result,
+          //thumbnail: uploadedImage,
         });
       });
     }
@@ -51,7 +51,7 @@ function CreateCourse() {
       !userInput.title ||
       !userInput.description ||
       !userInput.catagory ||
-      !userInput.thumbnail ||
+      //!userInput.thumbnail ||
       !userInput.createdBy
     ) {
       toast.error("All Fields are mandatory");
@@ -66,8 +66,8 @@ function CreateCourse() {
         catagory: "",
         createdBy: "",
         description: "",
-        thumbnail: null,
-        previewImage: "",
+        // thumbnail: null,
+        // previewImage: "",
       });
     }
 
@@ -76,31 +76,31 @@ function CreateCourse() {
 
   return (
     <HomeLayout>
-      <div className="flex items-center justify-center h-[100vh]">
+      <div className="flex items-center justify-center min-h-screen px-4 py-8">
         <form
           onSubmit={onFormSubmit}
-          className="flex flex-col justify-center gap-5 rounded-lg p-4 text-white w-[700px] my-10 shadow-[0_0_10px_black] relative"
+          className="flex flex-col justify-center gap-5 rounded-lg p-4 text-white w-full max-w-3xl my-10 shadow-[0_0_10px_black] relative"
         >
-          <Link className="absolute top-8 text-2xl link text-accent cursor-pointer">
+          <Link to="/courses" className="absolute top-4 left-4 text-2xl link text-accent cursor-pointer">
             <AiOutlineArrowLeft />
           </Link>
-          <h1 className="text-center text-2xl font-bold">
-            Create An Appoitement
+          <h1 className="text-center text-xl md:text-2xl font-bold mt-6">
+            Create An Appointment
           </h1>
 
-          <main className="grid grid-cols-2 gap-x-10">
-            <div className="gap-y-6">
-              <div className="">
-                <label htmlFor="image_upload" className="cursor-pointer">
+          <main className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-x-10">
+            <div className="flex flex-col gap-6">
+              {/* <div>
+                <label htmlFor="image_upload" className="cursor-pointer block">
                   {userInput.previewImage ? (
                     <img
                       src={userInput.previewImage}
-                      alt=""
-                      className="w-full h-44 m-auto border"
+                      alt="Preview"
+                      className="w-full h-44 m-auto border object-cover"
                     />
                   ) : (
                     <div className="w-full h-44 m-auto flex items-center justify-center border">
-                      <h1 className="font-bold text-lg">
+                      <h1 className="font-bold text-base md:text-lg text-center px-4">
                         Upload Your Course Thumbnail
                       </h1>
                     </div>
@@ -114,9 +114,9 @@ function CreateCourse() {
                   name="image_upload"
                   onChange={handleImageUpload}
                 />
-              </div>
+              </div> */}
               <div className="flex flex-col gap-1">
-                <label htmlFor="title" className="text-lg font-semibold">
+                <label htmlFor="title" className="text-base md:text-lg font-semibold">
                   Full Name:
                 </label>
                 <input
@@ -132,9 +132,9 @@ function CreateCourse() {
               </div>
             </div>
 
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col gap-4">
               <div className="flex flex-col gap-1">
-                <label htmlFor="createdBy" className="text-lg font-semibold">
+                <label htmlFor="createdBy" className="text-base md:text-lg font-semibold">
                   Blood Group:
                 </label>
                 <input
@@ -142,7 +142,7 @@ function CreateCourse() {
                   required
                   name="createdBy"
                   id="createdBy"
-                  placeholder="Enter Your Blood Gropp"
+                  placeholder="Enter Your Blood Group"
                   className="bg-transparent px-2 py-1 border"
                   value={userInput.createdBy}
                   onChange={handleUserInput}
@@ -150,7 +150,7 @@ function CreateCourse() {
               </div>
 
               <div className="flex flex-col gap-1">
-                <label htmlFor="catagory" className="text-lg font-semibold">
+                <label htmlFor="catagory" className="text-base md:text-lg font-semibold">
                   Gender:
                 </label>
                 <input
@@ -166,7 +166,7 @@ function CreateCourse() {
               </div>
 
               <div className="flex flex-col gap-1">
-                <label htmlFor="description" className="text-lg font-semibold">
+                <label htmlFor="description" className="text-base md:text-lg font-semibold">
                   Issues:
                 </label>
                 <textarea
@@ -184,9 +184,9 @@ function CreateCourse() {
 
           <button
             type="submit"
-            className="w-full bg-yellow-600 hover:bg-yellow-500 transition-all ease-in-out duration-300 py-2 rounded-sm font-semibold text-lg"
+            className="w-full bg-yellow-600 hover:bg-yellow-500 transition-all ease-in-out duration-300 py-2 rounded-sm font-semibold text-lg mt-2"
           >
-            Create Appoitement
+            Create Appointment
           </button>
         </form>
       </div>

@@ -65,12 +65,12 @@ const Home = () => {
                   <option value="Emergency care">Emergency Care</option>
                 </select>
 
-                <Link
+                <button
                   to={"/course/create"}
-                  className="w-full px-28 bg-lime-600 text-white py-3 rounded-lg hover:bg-grean-700 transition duration-300"
+                  className="w-full bg-lime-600 text-white py-3 rounded-lg hover:bg-grean-700 transition duration-300"
                 >
                   Book Appointment
-                </Link>
+                </button>
               </form>
             </div>
 
