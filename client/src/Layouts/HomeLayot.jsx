@@ -89,15 +89,26 @@ function HomeLayout({ children }) {
               {isLoggedIn && role === "ADMIN" && (
                 <li>
                   <Link
-                    to="/course/create"
+                    to="/courses"
                     className="block py-2 px-4 text-gray-800 hover:bg-lime-500 rounded-md transition"
                     onClick={toggleMenu}
                   >
-                    Create Appoitements
+                     All Appointments
                   </Link>
                 </li>
               )}
+
               <li>
+                <Link
+                  to="/course/create"
+                  className="block py-2 px-4 text-gray-800 hover:bg-lime-500 rounded-md transition"
+                  onClick={toggleMenu}
+                >
+                  Create Appoitements
+                </Link>
+              </li>
+
+              {/* <li>
                 <Link
                   to="/courses"
                   className="block py-2 px-4 text-gray-800 hover:bg-lime-500 rounded-md transition"
@@ -105,7 +116,7 @@ function HomeLayout({ children }) {
                 >
                   All Appointments
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   to="/about"
@@ -235,30 +246,43 @@ function HomeLayout({ children }) {
                 to="/admin/dashboard"
                 className=" font-semibold text-gray-800 hover:text-lime-600 duration-200 transition"
               >
-                Admin Dashboard
+                Dashboard
               </Link>
             )}
-            {isLoggedIn && role === "ADMIN" && (
+            {/* {isLoggedIn && role === "ADMIN" && (
               <Link
                 to="/admin/dashboard"
                 className=" font-semibold text-gray-800 hover:text-lime-600 duration-200 transition"
               >
                 Doctor Dashboard
               </Link>
-            )}
-            {isLoggedIn && role === "ADMIN" && (
+            )} */}
+            {/* {isLoggedIn && role === "ADMIN" && (
               <Link
                 to="/course/create"
                 className=" font-semibold text-gray-800 hover:text-lime-600 duration-200 transition"
               >
                 Create Appoitements
               </Link>
+            )} */}
+            
+
+            {isLoggedIn && role === "ADMIN" && (
+              <Link
+                to="/courses"
+                className=" font-semibold text-gray-800 hover:text-lime-600 duration-200 transition"
+              >
+                All Appointments
+              </Link>
             )}
+            
+
+
             <Link
-              to="/courses"
+              to="/course/create"
               className=" font-semibold text-gray-800 hover:text-lime-600 duration-200 transition"
             >
-              All Appointments
+              Create Appoitements
             </Link>
             <Link
               to="/about"

@@ -22,7 +22,7 @@ const courseSchema = new Schema({
     },
     age: {
         type: String,
-        //required: [true,'Age Must Be Required'],
+        required: [true,'Age Must Be Required'],
         trim: true
     },
     // thumbnail: {

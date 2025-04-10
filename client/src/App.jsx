@@ -29,15 +29,18 @@ function App() {
         <Route path='/about' element={<AboutUs />}></Route>
         <Route path='/signup' element={<Signup />}></Route>
         <Route path='/login' element ={<Login />}></Route>
-        <Route path='/courses' element = {<CourseList />}></Route>
+        {/* <Route path='/courses' element = {<CourseList />}></Route> */}
         <Route path='/services' element = {<Services />}></Route>
         <Route path='/contact' element ={<ContactUs />}></Route>
         <Route path='/denied' element = {<Denied />}></Route>
         <Route path='/course/description' element = {<CourseDescription />}></Route>
+
+        <Route path="/course/create" element={<CreateCourse />} />
         <Route element={<RequireAuth allowedRoles={["ADMIN"]} />}>
           <Route path="/course/create" element={<CreateCourse />} />
           <Route path='/course/addlecture' element = {<AddLecture />} />
           <Route path='/admin/dashboard' element = {<AdminDashBoard />} />
+          <Route path='/courses' element = {<CourseList />}></Route>
         </Route>
 
         <Route element={<RequireAuth allowedRoles={["ADMIN",'USER']} />}>

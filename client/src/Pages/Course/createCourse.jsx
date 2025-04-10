@@ -15,7 +15,7 @@ function CreateCourse() {
     catagory: "",
     createdBy: "",
     description: "",
-    age:"",
+    age: "",
     //thumbnail: null,
     //previewImage: "",
   });
@@ -52,7 +52,7 @@ function CreateCourse() {
       !userInput.title ||
       !userInput.description ||
       !userInput.catagory ||
-      !userInput.age || 
+      !userInput.age ||
       //!userInput.thumbnail ||
       !userInput.createdBy
     ) {
@@ -68,7 +68,7 @@ function CreateCourse() {
         catagory: "",
         createdBy: "",
         description: "",
-        age:"",
+        age: "",
         // thumbnail: null,
         // previewImage: "",
       });
@@ -79,47 +79,35 @@ function CreateCourse() {
 
   return (
     <HomeLayout>
-      <div className="flex items-center justify-center min-h-screen px-4 py-8">
+      <div className="pt-10">
+        <div className="text-center pt-20">
+          <h2 className="text-lime-500 text-sm uppercase font-bold hover:cursor-pointer">
+            Our Special Services
+          </h2>
+        </div>
+      </div>
+      <div className="flex items-center justify-center px-4">
         <form
           onSubmit={onFormSubmit}
           className="flex flex-col justify-center gap-5 rounded-lg p-4 text-white w-full max-w-3xl my-10 shadow-[0_0_10px_black] relative"
         >
-          <Link to="/courses" className="absolute top-4 left-4 text-2xl link text-accent cursor-pointer">
+          <Link
+            to="/courses"
+            className="absolute top-4 left-4 text-2xl link text-accent cursor-pointer"
+          >
             <AiOutlineArrowLeft />
           </Link>
-          <h1 className="text-center text-xl md:text-2xl font-bold mt-6">
+          <h1 className="text-center text-xl md:text-2xl font-bold mt-3">
             Create An Appointment
           </h1>
 
-          <main className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-x-10">
+          <main className="grid grid-cols-1 md:grid-cols-1 gap-6 md:gap-x-10">
             <div className="flex flex-col gap-6">
-              {/* <div>
-                <label htmlFor="image_upload" className="cursor-pointer block">
-                  {userInput.previewImage ? (
-                    <img
-                      src={userInput.previewImage}
-                      alt="Preview"
-                      className="w-full h-44 m-auto border object-cover"
-                    />
-                  ) : (
-                    <div className="w-full h-44 m-auto flex items-center justify-center border">
-                      <h1 className="font-bold text-base md:text-lg text-center px-4">
-                        Upload Your Course Thumbnail
-                      </h1>
-                    </div>
-                  )}
-                </label>
-                <input
-                  className="hidden"
-                  type="file"
-                  id="image_upload"
-                  accept=".jpg, .jpeg, .png"
-                  name="image_upload"
-                  onChange={handleImageUpload}
-                />
-              </div> */}
               <div className="flex flex-col gap-1">
-                <label htmlFor="title" className="text-base md:text-lg font-semibold">
+                <label
+                  htmlFor="title"
+                  className="text-base md:text-lg font-semibold"
+                >
                   Full Name:
                 </label>
                 <input
@@ -136,55 +124,52 @@ function CreateCourse() {
             </div>
 
             <div className="flex flex-col gap-4">
-              <div className="flex flex-col gap-1">
-                <label htmlFor="createdBy" className="text-base md:text-lg font-semibold">
-                  Blood Group:
-                </label>
-                <input
-                  type="text"
-                  required
-                  name="createdBy"
-                  id="createdBy"
-                  placeholder="Enter Your Blood Group"
-                  className="bg-transparent px-2 py-1 border"
-                  value={userInput.createdBy}
-                  onChange={handleUserInput}
-                />
+              {/* Blood Group and Gender in same row on desktop */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="flex flex-col gap-1">
+                  <label
+                    htmlFor="createdBy"
+                    className="text-base md:text-lg font-semibold"
+                  >
+                    Blood Group:
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    name="createdBy"
+                    id="createdBy"
+                    placeholder="Enter Your Blood Group"
+                    className="bg-transparent px-2 py-1 border"
+                    value={userInput.createdBy}
+                    onChange={handleUserInput}
+                  />
+                </div>
+
+                <div className="flex flex-col gap-1">
+                  <label
+                    htmlFor="catagory"
+                    className="text-base md:text-lg font-semibold"
+                  >
+                    Gender:
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    name="catagory"
+                    id="catagory"
+                    placeholder="Enter Your Gender"
+                    className="bg-transparent px-2 py-1 border"
+                    value={userInput.catagory}
+                    onChange={handleUserInput}
+                  />
+                </div>
               </div>
 
               <div className="flex flex-col gap-1">
-                <label htmlFor="catagory" className="text-base md:text-lg font-semibold">
-                  Gender:
-                </label>
-                <input
-                  type="text"
-                  required
-                  name="catagory"
-                  id="catagory"
-                  placeholder="Enter Your Gender"
-                  className="bg-transparent px-2 py-1 border"
-                  value={userInput.catagory}
-                  onChange={handleUserInput}
-                />
-              </div>
-
-              <div className="flex flex-col gap-1">
-                <label htmlFor="description" className="text-base md:text-lg font-semibold">
-                  Issues:
-                </label>
-                <textarea
-                  required
-                  name="description"
-                  id="description"
-                  placeholder="Enter Your Issues"
-                  className="bg-transparent px-2 py-1 border h-24 overflow-y-scroll resize-none"
-                  value={userInput.description}
-                  onChange={handleUserInput}
-                />
-              </div>
-
-              <div className="flex flex-col gap-1">
-                <label htmlFor="age" className="text-base md:text-lg font-semibold">
+                <label
+                  htmlFor="age"
+                  className="text-base md:text-lg font-semibold"
+                >
                   Age:
                 </label>
                 <input
@@ -194,6 +179,24 @@ function CreateCourse() {
                   placeholder="Enter Your age"
                   className="bg-transparent px-2 py-1 border overflow-y-scroll resize-none"
                   value={userInput.age}
+                  onChange={handleUserInput}
+                />
+              </div>
+
+              <div className="flex flex-col gap-1">
+                <label
+                  htmlFor="description"
+                  className="text-base md:text-lg font-semibold"
+                >
+                  Issues:
+                </label>
+                <textarea
+                  required
+                  name="description"
+                  id="description"
+                  placeholder="Enter Your Issues"
+                  className="bg-transparent px-2 py-1 border h-24 overflow-y-scroll resize-none"
+                  value={userInput.description}
                   onChange={handleUserInput}
                 />
               </div>
