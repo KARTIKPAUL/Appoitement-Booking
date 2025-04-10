@@ -41,6 +41,11 @@ function CourseCard({ data }) {
             <span className="text-yellow-500 font-bold">Blood Group: </span>{" "}
             {data?.createdBy}
           </p>
+
+          <p className="line-clamp-2 text-sm md:text-base font-semibold">
+            <span className="text-yellow-500 font-bold">Age: </span>{" "}
+            {data?.age}
+          </p>
         </div>
       </div>
     </div>

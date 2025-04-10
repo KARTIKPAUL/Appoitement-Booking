@@ -15,6 +15,7 @@ function CreateCourse() {
     catagory: "",
     createdBy: "",
     description: "",
+    age:"",
     //thumbnail: null,
     //previewImage: "",
   });
@@ -51,6 +52,7 @@ function CreateCourse() {
       !userInput.title ||
       !userInput.description ||
       !userInput.catagory ||
+      !userInput.age || 
       //!userInput.thumbnail ||
       !userInput.createdBy
     ) {
@@ -66,6 +68,7 @@ function CreateCourse() {
         catagory: "",
         createdBy: "",
         description: "",
+        age:"",
         // thumbnail: null,
         // previewImage: "",
       });
@@ -176,6 +179,21 @@ function CreateCourse() {
                   placeholder="Enter Your Issues"
                   className="bg-transparent px-2 py-1 border h-24 overflow-y-scroll resize-none"
                   value={userInput.description}
+                  onChange={handleUserInput}
+                />
+              </div>
+
+              <div className="flex flex-col gap-1">
+                <label htmlFor="age" className="text-base md:text-lg font-semibold">
+                  Age:
+                </label>
+                <input
+                  required
+                  name="age"
+                  id="age"
+                  placeholder="Enter Your age"
+                  className="bg-transparent px-2 py-1 border overflow-y-scroll resize-none"
+                  value={userInput.age}
                   onChange={handleUserInput}
                 />
               </div>

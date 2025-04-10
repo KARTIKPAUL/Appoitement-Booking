@@ -42,7 +42,7 @@ export const createNewCourse = createAsyncThunk(
       formData.append("catagory", data?.catagory);
       formData.append("createdBy", data?.createdBy);
       formData.append("description", data?.description);
-      //formData.append("thumbnail", data?.thumbnail);
+      formData.append("age", data?.age);
 
       const response = axioInstance.post("/courses", formData);
 
@@ -50,11 +50,14 @@ export const createNewCourse = createAsyncThunk(
         loading: "Crreating New Course",
         success: "Course Created Sucessfully",
         error: "Failed to create course",
+        
       });
 
       return (await response).data;
     } catch (error) {
       toast.error(error?.response?.data?.message);
+      {console.log(error?.response?.data?.message + "Nanananananan");
+      }
     }
   }
 );

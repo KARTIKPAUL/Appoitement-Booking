@@ -20,6 +20,11 @@ const courseSchema = new Schema({
         required: [true,'Catagory Must Be Required'],
         trim: true
     },
+    age: {
+        type: String,
+        //required: [true,'Age Must Be Required'],
+        trim: true
+    },
     // thumbnail: {
     //     public_id: {
     //         type: String,

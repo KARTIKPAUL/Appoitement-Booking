@@ -42,11 +42,11 @@ const getLectureByCourseId = async function (req, res, next) {
 
 const createCourse = async function (req, res, next) {
   try {
-    const { title, description, catagory, createdBy } = req.body;
+    const { title, description, catagory, createdBy,age} = req.body;
 
-    if (!title || !description || !catagory || !createdBy) {
+    if (!title || !description || !catagory || !createdBy || !age) {
       return next(
-        new AppError("All Fields Are RRequired For Create A Course", 400)
+        new AppError("All Fields Are Required For Create A Course" + req, 400)
       );
     }
 
@@ -55,6 +55,8 @@ const createCourse = async function (req, res, next) {
       description,
       catagory,
       createdBy,
+      age
+      // age,
     //   thumbnail: {
     //     public_id: "Dummy",
     //     secure_url: "Dummy",
