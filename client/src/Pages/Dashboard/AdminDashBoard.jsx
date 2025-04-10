@@ -173,7 +173,7 @@ function AdminDashBoard() {
               className="w-fit bg-yellow-500 hover:bg-yellow-600 transition-all ease-in-out duration-300 rounded-lg py-2 px-4 font-semibold text-lg cursor-pointer"
               onClick={() => navigate("/course/create")}
             >
-              Create Appoitements
+              Create Appoitement
             </button>
           </div>
 

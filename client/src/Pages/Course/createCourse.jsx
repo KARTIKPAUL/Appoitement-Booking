@@ -6,6 +6,7 @@ import { createNewCourse } from "../../Redux/Slices/courseSlice";
 import HomeLayout from "../../Layouts/HomeLayot";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { bloodGroupOption, genderOption } from "../../Components/Constants/DropDownData";
 
 function CreateCourse() {
   const dispatch = useDispatch();
@@ -74,7 +75,8 @@ function CreateCourse() {
       });
     }
 
-    navigate("/courses");
+    //navigate("/courses");
+    toast.success("Appoitement Booked Succesfully")
   }
 
   return (
@@ -82,7 +84,7 @@ function CreateCourse() {
       <div className="pt-10">
         <div className="text-center pt-20">
           <h2 className="text-lime-500 text-sm uppercase font-bold hover:cursor-pointer">
-            Our Special Services
+            Create An Appoitement
           </h2>
         </div>
       </div>
@@ -133,16 +135,23 @@ function CreateCourse() {
                   >
                     Blood Group:
                   </label>
-                  <input
-                    type="text"
+                  <select
                     required
                     name="createdBy"
                     id="createdBy"
-                    placeholder="Enter Your Blood Group"
                     className="bg-transparent px-2 py-1 border"
                     value={userInput.createdBy}
                     onChange={handleUserInput}
-                  />
+                  >
+                    <option value="" disabled hidden>
+                      Select Blood Group.....
+                    </option>
+                    {bloodGroupOption.map((group, index) => (
+                      <option key={index} value={group} className="text-black">
+                        {group}
+                      </option>
+                    ))}
+                  </select>
                 </div>
 
                 <div className="flex flex-col gap-1">
@@ -152,16 +161,23 @@ function CreateCourse() {
                   >
                     Gender:
                   </label>
-                  <input
-                    type="text"
+                  <select
                     required
                     name="catagory"
                     id="catagory"
-                    placeholder="Enter Your Gender"
                     className="bg-transparent px-2 py-1 border"
                     value={userInput.catagory}
                     onChange={handleUserInput}
-                  />
+                  >
+                    <option value="" disabled hidden>
+                      Select Gender....
+                    </option>
+                    {genderOption.map((gender, index) => (
+                      <option key={index} value={gender} className="text-black">
+                        {gender}
+                      </option>
+                    ))}
+                  </select>
                 </div>
               </div>
 

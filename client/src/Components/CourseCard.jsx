@@ -2,10 +2,10 @@ import { useNavigate } from "react-router-dom";
 
 function CourseCard({ data }) {
   const navigate = useNavigate();
-  
+
   return (
     <div
-      onClick={() => navigate("/course/description", { state: { ...data } })}
+      //onClick={() => navigate("/course/description", { state: { ...data } })}
       className="text-white w-full sm:w-80 md:w-96 h-auto shadow-lg 
         rounded-lg cursor-pointer group overflow-hidden bg-zinc-700"
     >
@@ -23,7 +23,7 @@ function CourseCard({ data }) {
             Patient Name: {data?.title}
           </h2>
 
-          <p className="line-clamp-2 text-sm md:text-base"> 
+          <p className="line-clamp-2 text-sm md:text-base">
             Issues: {data?.description}
           </p>
 
@@ -33,7 +33,9 @@ function CourseCard({ data }) {
           </p>
 
           <p className="line-clamp-2 text-sm md:text-base font-semibold">
-            <span className="text-yellow-500 font-bold">Total Appointments: </span>
+            <span className="text-yellow-500 font-bold">
+              Total Appointments:{" "}
+            </span>
             {data?.numbersOfLectures}
           </p>
 
@@ -43,8 +45,7 @@ function CourseCard({ data }) {
           </p>
 
           <p className="line-clamp-2 text-sm md:text-base font-semibold">
-            <span className="text-yellow-500 font-bold">Age: </span>{" "}
-            {data?.age}
+            <span className="text-yellow-500 font-bold">Age: </span> {data?.age}
           </p>
         </div>
       </div>

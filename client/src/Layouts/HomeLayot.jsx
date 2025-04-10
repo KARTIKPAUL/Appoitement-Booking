@@ -104,7 +104,7 @@ function HomeLayout({ children }) {
                   className="block py-2 px-4 text-gray-800 hover:bg-lime-500 rounded-md transition"
                   onClick={toggleMenu}
                 >
-                  Create Appoitements
+                  Create Appoitement
                 </Link>
               </li>
 
@@ -262,7 +262,7 @@ function HomeLayout({ children }) {
                 to="/course/create"
                 className=" font-semibold text-gray-800 hover:text-lime-600 duration-200 transition"
               >
-                Create Appoitements
+                Create Appoitement
               </Link>
             )} */}
             
@@ -282,7 +282,7 @@ function HomeLayout({ children }) {
               to="/course/create"
               className=" font-semibold text-gray-800 hover:text-lime-600 duration-200 transition"
             >
-              Create Appoitements
+              Create Appoitement
             </Link>
             <Link
               to="/about"

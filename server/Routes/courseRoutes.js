@@ -17,7 +17,7 @@ router
   .get(getAllCourses)
   .post(
     isLoggedIn,
-    authorisedRoles("ADMIN"),
+    //authorisedRoles("ADMIN"),
     upload.single("thumbnail"),
     createCourse
   );
