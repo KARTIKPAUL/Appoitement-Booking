@@ -6,6 +6,7 @@ import WhyChooseUs from "./WhyChoous";
 import OurTeam from "../Components/OurTeam";
 import Gallery from "../Components/Gallery";
 import Testimonials from "../Components/Testimonials";
+import Testimonialss from "../Components/Testimonialss";
 
 const Home = () => {
   // State for form inputs
@@ -143,7 +144,7 @@ const Home = () => {
 
       {/* <!-- Latest News Begin --> */}
 
-      <Testimonials />
+      <Testimonialss />
 
       {/* <!-- Latest News End --> */}
     </div>

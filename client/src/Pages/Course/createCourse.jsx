@@ -83,7 +83,7 @@ function CreateCourse() {
     <HomeLayout>
       <div className="pt-10">
         <div className="text-center pt-20">
-          <h2 className="text-lime-500 text-sm uppercase font-bold hover:cursor-pointer">
+          <h2 className="text-lime-500 text-sm uppercase font-bold hover:cursor-pointer mt-5">
             Create An Appoitement
           </h2>
         </div>

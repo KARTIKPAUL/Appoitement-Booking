@@ -1,60 +1,73 @@
+
+
 import React from "react";
+import HomeLayout from "../Layouts/HomeLayot";
 
 const Services = () => {
   return (
-    <div className="bg-gray-50 min-h-screen">
-      {/* <section
-        className="py-20 bg-cover bg-center"
-        style={{ backgroundImage: "url(img/gallery/gallary-5.jpg)" }}
-      >
-        <div className="container mx-auto text-center">
-          <h2 className="text-4xl font-bold text-lime-500   duration-200 cursor-pointer">
-            Services
+
+    <HomeLayout>
+    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 px-4">
+      <div className="mx-auto">
+        {/* Header Section */}
+        <div className="text-center mb-16 mt-5 pt-20">
+          <span className="inline-block text-lg font-semibold text-blue-600 mb-4 tracking-wide uppercase relative before:content-[''] before:absolute before:-bottom-2 before:left-1/2 before:-translate-x-1/2 before:w-16 before:h-1 before:bg-lime-500">
+            Our Special Services
+          </span>
+          <h2 className="text-4xl font-bold text-gray-900 mt-4 mb-6 relative z-10">
+            Perfect Smile Starts
+            <br className="hidden sm:block" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-500 to-blue-600">
+              With Healthy Teeth
+            </span>
           </h2>
         </div>
-      </section> */}
-      {/* Header Section */}
 
-      <div className="text-center pt-10">
-        <h2 className="text-lime-500 text-sm uppercase font-bold  hover:cursor-pointer">
-          Our Special Services
-        </h2>
-
-        <h3 className="text-4xl font-bold text-gray-800 hover:cursor-pointer text-center mt-2">
-          Perfect Smile Starts
-        </h3>
-      </div>
-
-      {/* Services Section */}
-      <section className="py-10">
-        <div className="container mx-auto px-4">
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {/* Map services dynamically */}
-            {servicesData.map((service, index) => (
-              <div
-                key={index}
-                className="bg-white shadow-lg rounded-lg p-6 hover:shadow-2xl transition duration-300"
-              >
-                <div className="flex flex-col items-center">
-                  <div className="bg-blue-100 p-4 rounded-full mb-4">
-                    {/* Render the SVG icon directly */}
+        {/* Services Section */}
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {servicesData.map((service, index) => (
+            <div
+              key={index}
+              className="group relative bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-out p-8 overflow-hidden"
+            >
+              {/* Hover effect background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-lime-100/50 to-blue-100/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              
+              <div className="relative flex flex-col items-center text-center">
+                {/* Icon Container */}
+                <div className="mb-6 relative">
+                  <div className="absolute inset-0 bg-lime-500/10 blur-[20px] rounded-full" />
+                  <div className="bg-blue-100 p-4 rounded-full mb-4 transition-transform duration-300 group-hover:scale-110">
                     {service.icon}
                   </div>
-                  <h4 className="text-xl font-semibold text-gray-800 mb-2">
-                    {service.title}
-                  </h4>
-                  <p className="text-gray-600 text-center mb-4">
-                    {service.description}
-                  </p>
                 </div>
+
+                {/* Content */}
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  {service.description}
+                </p>
+
+                {/* Animated underline */}
+                <div className="w-12 h-1 bg-lime-500 rounded-full mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-      </section>
-    </div>
+
+        {/* Decorative Elements */}
+        <div className="absolute left-0 right-0 -bottom-24 h-48 bg-gradient-to-t from-white/50 to-transparent pointer-events-none" />
+      </div>
+    </section>
+    </HomeLayout>
   );
-};
+}
+ export default Services;
+
+
+
 
 // Service data array for easy maintenance
 const servicesData = [
@@ -177,65 +190,67 @@ const servicesData = [
       </svg>
     ),
   },
-  {
-    title: "Smile Makeovers",
-    description:
-      "Comprehensive smile design solutions to enhance your appearance and confidence.",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="w-12 h-12 text-gray-800"
-      >
-        <circle cx="12" cy="12" r="10" />
-        <path d="M8 16c1.5 2 4.5 2 6 0m-7-6h.01m10-.01h.01" />
-      </svg>
-    ),
-  },
-  {
-    title: "Sedation Dentistry",
-    description:
-      "Comfortable dental care with sedation options for stress-free experiences.",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="w-12 h-12 text-gray-800"
-      >
-        <path d="M9 3L7.67 8H2l5 3.6L4.67 17 9 13.4 13.33 17 12 11.6 17 8h-5.67L15 3h-6z" />
-      </svg>
-    ),
-  },
-  {
-    title: "Oral Surgery",
-    description:
-      "Professional care for complex cases, including wisdom teeth extraction and more.",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="w-12 h-12 text-gray-800"
-      >
-        <path d="M8 2h8l1.5 10h-11L8 2z" />
-        <path d="M6.5 12h11L14 22h-4z" />
-      </svg>
-    ),
-  },
+  // {
+  //   title: "Smile Makeovers",
+  //   description:
+  //     "Comprehensive smile design solutions to enhance your appearance and confidence.",
+  //   icon: (
+  //     <svg
+  //       xmlns="http://www.w3.org/2000/svg"
+  //       viewBox="0 0 24 24"
+  //       fill="none"
+  //       stroke="currentColor"
+  //       strokeWidth="2"
+  //       strokeLinecap="round"
+  //       strokeLinejoin="round"
+  //       className="w-12 h-12 text-gray-800"
+  //     >
+  //       <circle cx="12" cy="12" r="10" />
+  //       <path d="M8 16c1.5 2 4.5 2 6 0m-7-6h.01m10-.01h.01" />
+  //     </svg>
+  //   ),
+  // },
+  // {
+  //   title: "Sedation Dentistry",
+  //   description:
+  //     "Comfortable dental care with sedation options for stress-free experiences.",
+  //   icon: (
+  //     <svg
+  //       xmlns="http://www.w3.org/2000/svg"
+  //       viewBox="0 0 24 24"
+  //       fill="none"
+  //       stroke="currentColor"
+  //       strokeWidth="2"
+  //       strokeLinecap="round"
+  //       strokeLinejoin="round"
+  //       className="w-12 h-12 text-gray-800"
+  //     >
+  //       <path d="M9 3L7.67 8H2l5 3.6L4.67 17 9 13.4 13.33 17 12 11.6 17 8h-5.67L15 3h-6z" />
+  //     </svg>
+  //   ),
+  // },
+  // {
+  //   title: "Oral Surgery",
+  //   description:
+  //     "Professional care for complex cases, including wisdom teeth extraction and more.",
+  //   icon: (
+  //     <svg
+  //       xmlns="http://www.w3.org/2000/svg"
+  //       viewBox="0 0 24 24"
+  //       fill="none"
+  //       stroke="currentColor"
+  //       strokeWidth="2"
+  //       strokeLinecap="round"
+  //       strokeLinejoin="round"
+  //       className="w-12 h-12 text-gray-800"
+  //     >
+  //       <path d="M8 2h8l1.5 10h-11L8 2z" />
+  //       <path d="M6.5 12h11L14 22h-4z" />
+  //     </svg>
+  //   ),
+  // },
 ];
 
-export default Services;
+
+
+

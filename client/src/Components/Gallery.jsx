@@ -49,12 +49,12 @@ export default Gallery;
 
 
 const images = [
-    { src: "/img/op/op8.jpg", alt: "Gallery Image 1" },
-    { src: "/img/op/op5.jpg", alt: "Gallery Image 2" },
-    { src: "/img/op/op3.jpg", alt: "Gallery Image 3" },
-    { src: "/img/op/op7.jpg", alt: "Gallery Image 2" },
-    { src: "/img/op/op2.jpg", alt: "Gallery Image 5" },
-    { src: "/img/op/op6.jpg", alt: "Gallery Image 6" },
-    { src: "/img/op/op4.jpg", alt: "Gallery Image 7" },
-    { src: "/img/op/op1.jpg", alt: "Gallery Image 3" },
+    { src: "https://images.pexels.com/photos/139398/thermometer-headache-pain-pills-139398.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Gallery Image 1" },
+    { src: "https://images.pexels.com/photos/2324837/pexels-photo-2324837.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Gallery Image 2" },
+    { src: "https://images.pexels.com/photos/1350560/pexels-photo-1350560.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Gallery Image 3" },
+    { src: "https://images.pexels.com/photos/52527/dentist-pain-borowac-cure-52527.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Gallery Image 2" },
+    { src: "https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Gallery Image 5" },
+    { src: "https://images.pexels.com/photos/954585/pexels-photo-954585.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Gallery Image 6" },
+    { src: "https://images.pexels.com/photos/4021779/pexels-photo-4021779.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Gallery Image 7" },
+    { src: "https://images.pexels.com/photos/305565/pexels-photo-305565.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Gallery Image 3" },
   ];

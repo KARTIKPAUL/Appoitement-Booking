@@ -21,6 +21,8 @@ import AddLecture from './Pages/Dashboard/AddLecture'
 import AdminDashBoard from './Pages/Dashboard/AdminDashBoard'
 import Services from './Pages/Services'
 
+import Testimonialss from './Components/Testimonialss'
+
 function App() {
   return (
     <>
@@ -29,6 +31,7 @@ function App() {
         <Route path='/about' element={<AboutUs />}></Route>
         <Route path='/signup' element={<Signup />}></Route>
         <Route path='/login' element ={<Login />}></Route>
+        <Route path='/testimonials' element ={<Testimonialss />}></Route>
         {/* <Route path='/courses' element = {<CourseList />}></Route> */}
         <Route path='/services' element = {<Services />}></Route>
         <Route path='/contact' element ={<ContactUs />}></Route>

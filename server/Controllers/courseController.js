@@ -87,7 +87,7 @@ const createCourse = async function (req, res, next) {
 
     res.status(200).json({
       success: true,
-      message: "Course Created Sucessfully",
+      message: "",
       course,
     });
   } catch (error) {

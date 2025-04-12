@@ -65,7 +65,7 @@ function ContactUs() {
       <div className="pt-20">
         <div className="text-center pt-20">
           <h2 className="text-lime-500 text-sm uppercase font-bold  hover:cursor-pointer">
-            Our Special Services
+            Contact Us
           </h2>
 
           <h3 className="text-4xl font-bold text-gray-100 hover:cursor-pointer text-center mt-2">

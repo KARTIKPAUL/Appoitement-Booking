@@ -24,16 +24,16 @@ const OurTeam = () => {
               <div className="flex justify-center p-6">
                 <img
                   className="w-64 h-64 object-cover rounded-full shadow-md"
-                  src="img/team/NiveditaImage.jpg"
+                  src="https://images.pexels.com/photos/356040/pexels-photo-356040.jpeg?auto=compress&cs=tinysrgb&w=600"
                   alt="Caroline Grant"
                 />
               </div>
               <div className="p-6 text-center">
                 <h5 className="text-xl font-semibold text-gray-800">
-                  Dr. Tushar Maturkar
+                  Mr. Kartik Paul
                 </h5>
                 <span className="text-sm text-lime-500 block mt-2">
-                  BDS, Dental Surgeon
+                  B.TECH,Computer Science
                 </span>
                 <div className="flex justify-center space-x-4 mt-4">
                   <a href="#" className="text-gray-600 hover:text-lime-500">

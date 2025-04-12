@@ -39,43 +39,59 @@ const chooseUsData = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="py-12 bg-gray-50">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 px-4">
+      <div className="mx-auto">
         {/* Header Section */}
-        <div className="text-center mb-12">
-          <div className="text-lime-500 text-lg uppercase font-semibold">
-            Why choose us?
-          </div>
-          <h2 className="text-3xl font-bold text-gray-800 mt-2">
-            Offer for you
+        <div className="text-center mb-16">
+          <span className="inline-block text-lg font-semibold text-blue-600 mb-4 tracking-wide uppercase relative before:content-[''] before:absolute before:-bottom-2 before:left-1/2 before:-translate-x-1/2 before:w-16 before:h-1 before:bg-lime-500">
+            Why Choose Us?
+          </span>
+          <h2 className="text-4xl font-bold text-gray-900 mt-4 mb-6 relative z-10">
+            Exceptional Care, <br className="hidden sm:block" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-lime-500 to-blue-600">
+              Extraordinary Results
+            </span>
           </h2>
         </div>
 
         {/* Cards Section */}
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {/* Card Items */}
           {chooseUsData.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-lg p-6 hover:shadow-2xl transition duration-300"
+              className="group relative bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-out p-8 overflow-hidden"
             >
-              <div className="flex flex-col items-center">
-                {/* Icon/Image */}
-                <img
-                  src={item.icon}
-                  alt={item.title}
-                  className="w-16 h-16 mb-4"
-                />
-                {/* Title */}
-                <h5 className="text-xl font-semibold text-gray-800 mb-2 text-center">
+              {/* Hover effect background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-lime-100/50 to-blue-100/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              
+              <div className="relative flex flex-col items-center text-center">
+                {/* Icon Container */}
+                <div className="mb-6 relative">
+                  <div className="absolute inset-0 bg-lime-500/10 blur-[20px] rounded-full" />
+                  <img
+                    src={item.icon}
+                    alt={item.title}
+                    className="w-20 h-20 mb-4 transition-transform duration-300 group-hover:scale-110"
+                  />
+                </div>
+
+                {/* Content */}
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">
                   {item.title}
-                </h5>
-                {/* Description */}
-                <p className="text-gray-600 text-center">{item.description}</p>
+                </h3>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  {item.description}
+                </p>
+
+                {/* Animated underline */}
+                <div className="w-12 h-1 bg-lime-500 rounded-full mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
             </div>
           ))}
         </div>
+
+        {/* Decorative Elements */}
+        <div className="absolute left-0 right-0 -bottom-24 h-48 bg-gradient-to-t from-white/50 to-transparent pointer-events-none" />
       </div>
     </section>
   );

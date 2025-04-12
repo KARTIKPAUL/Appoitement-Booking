@@ -9,9 +9,9 @@ export const deleteCourses = createAsyncThunk("/courses/delete", async (id) => {
   try {
     const response = axioInstance.delete(`/courses/${id}`);
     toast.promise(response, {
-      loading: "Deleting Course data",
-      success: "Course Deleted Successfuly !!",
-      error: "Failed To Delete The Course",
+      loading: "Deleting Appoitement data",
+      success: "Appoitement Deleted Successfuly !!",
+      error: "Failed To Delete The Appoitement",
     });
     return (await response).data;
   } catch (error) {
@@ -23,9 +23,9 @@ export const getAllCourses = createAsyncThunk("/courses/get", async () => {
   try {
     const response = axioInstance.get("/courses");
     toast.promise(response, {
-      loading: "Loading Course data",
-      success: "Course Loaded Successfuly !!",
-      error: "Failed To Get The Course",
+      loading: "Loading Appoitement data",
+      success: "Appoitement Loaded Successfuly !!",
+      error: "Failed To Get The Appoitement",
     });
     return (await response).data.courses;
   } catch (error) {
@@ -47,16 +47,16 @@ export const createNewCourse = createAsyncThunk(
       const response = axioInstance.post("/courses", formData);
 
       toast.promise(response, {
-        loading: "Crreating New Course",
-        success: "Course Created Sucessfully",
-        error: "Failed to create course",
+        loading: "Crreating New Apppoitement",
+        success: "Appoitement Created Sucessfully",
+        error: "Failed to create Appoitement",
         
       });
 
       return (await response).data;
     } catch (error) {
       toast.error(error?.response?.data?.message);
-      {console.log(error?.response?.data?.message + "Nanananananan");
+      {console.log(error?.response?.data?.message);
       }
     }
   }

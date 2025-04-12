@@ -10,58 +10,82 @@ const Footer = () => {
       {/* Footer Section Begin */}
       <footer className="bg-gray-900 text-gray-300">
         {/* Top Section */}
-        <div className="bg-gray-800 py-10">
+        {/* <div className="bg-gray-800 py-10">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-between items-center gap-6">
-              {/* Logo */}
+              
               <div className="flex-shrink-0">
                 <a href="#" className="block">
                   <img
-                    src="/img/nivedita-medical-best-medical-in-falakata-bengal-make-my-software-coochbehar.webp"
+                    src="/img/nivedita-medical-best-medical-in-falakata-bengal-make-my-software-coochbehar-footer-logo.webp"
                     alt="Logo"
-                    className="h-20 w-auto md:h-16 sm:h-12 sm:w-auto object-contain"
+                    className="h-20 w-auto md:h-16 sm:h-12 sm:w-auto object-contain rounded-full"
                   />
                 </a>
               </div>
 
-              {/* Social Media Links */}
+              
               <div className="flex space-x-4 text-2xl sm:justify-center sm:items-center">
                 <a
                   href="#"
-                  className="hover:text-lime-500 transition"
+                  className="text-blue-600 hover:text-blue-800 transition-colors duration-300"
                   aria-label="Facebook"
                 >
                   <FaFacebook />
                 </a>
+
                 <a
                   href="#"
-                  className="hover:text-lime-500 transition"
-                  aria-label="Twitter"
-                >
-                  <FaTwitter />
-                </a>
-                <a
-                  href="#"
-                  className="hover:text-lime-500 transition"
+                  className="text-pink-500 hover:text-pink-700 transition-colors duration-300"
                   aria-label="Instagram"
                 >
                   <FaInstagram />
                 </a>
-                <a
-                  href="#"
-                  className="hover:text-lime-500 transition"
-                  aria-label="Dribbble"
-                >
-                  <FaDribbble />
-                </a>
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Main Section */}
         <div className="container mx-auto px-4 py-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+            {/* Logo Section */}
+            <div>
+              <h5 className="text-lg font-bold mb-4 text-lime-500">Company</h5>
+
+              <div className="flex flex-col items-start">
+              <a href="#" className="block">
+                <img
+                  src="/img/nivedita-medical-best-medical-in-falakata-bengal-make-my-software-coochbehar-footer-logo.webp"
+                  alt="Logo"
+                  className="h-20 w-auto md:h-16 sm:h-12 sm:w-auto object-contain rounded-full"
+                />
+              </a>
+
+              <p>Nivedita Medical <br /> 13+ Years Of experience</p>
+
+              <div className="flex mt-5 space-x-4 text-2xl sm:justify-center sm:items-center">
+                <a
+                  href="#"
+                  className="text-blue-600 hover:text-blue-800 transition-colors duration-300"
+                  aria-label="Facebook"
+                >
+                  <FaFacebook />
+                </a>
+
+                <a
+                  href="#"
+                  className="text-pink-500 hover:text-pink-700 transition-colors duration-300"
+                  aria-label="Instagram"
+                >
+                  <FaInstagram />
+                </a>
+              </div>
+              </div>
+
+
+            </div>
+
             {/* Company Section */}
             <div>
               <h5 className="text-lg font-bold mb-4 text-lime-500">Company</h5>
@@ -137,9 +161,7 @@ const Footer = () => {
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <IoLocationSharp className="mr-3 mt-1 text-lime-500 text-lg" />
-                  <span>
-                    Falakata, West Bengal-735211
-                  </span>
+                  <span>Falakata, West Bengal-735211</span>
                 </li>
                 <li className="flex items-center">
                   <BsTelephone className="mr-3 text-lime-500 text-lg" />
