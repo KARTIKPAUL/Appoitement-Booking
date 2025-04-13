@@ -7,6 +7,7 @@ import OurTeam from "../Components/OurTeam";
 import Gallery from "../Components/Gallery";
 import Testimonials from "../Components/Testimonials";
 import Testimonialss from "../Components/Testimonialss";
+import ServicesSection from "../Components/ServicesSection";
 
 const Home = () => {
   // State for form inputs
@@ -126,7 +127,7 @@ const Home = () => {
 
       {/* <!-- Services Section Begin --> */}
 
-      <Services />
+      <ServicesSection />
 
       {/* <!-- Services Section End --> */}
 
