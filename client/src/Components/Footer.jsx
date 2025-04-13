@@ -206,12 +206,12 @@ const Footer = () => {
               Design & Developed by &nbsp;
               <span>
                 <a
-                  href=""
+                  href="https://www.kodekalp.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-lime-500 hover:text-lime-600 transition"
                 >
-                  Me.
+                  KoddeKalp Global Technology Private Limited
                 </a>
               </span>
             </p>
